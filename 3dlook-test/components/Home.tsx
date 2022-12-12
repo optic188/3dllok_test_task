@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     const {finishTask, removeTask, fetchTodoAsyncAction} = useTaskActions()
     const { userId } = router.query
     useEffect(()=>{
-        fetchTodoAsyncAction()
+        fetchTodoAsyncAction(userId)
     }, [])
     return (
         <IonApp>

@@ -4,8 +4,8 @@ import { markAsDoneAction, removeItemAction, fetchTodoAsyncAction } from '../sto
 export const useTaskActions = ()=> {
     const dispatch = useDispatch();
     return {
-        finishTask:(taskId)=>dispatch(markAsDoneAction(taskId)),
-        removeTask: (taskId) => dispatch(removeItemAction(taskId)),
-        fetchTodoAsyncAction: ()=>dispatch(fetchTodoAsyncAction())
+        finishTask:(taskId:number )=>dispatch(markAsDoneAction(taskId)),
+        removeTask: (taskId:number ) => dispatch(removeItemAction(taskId)),
+        fetchTodoAsyncAction: (userId:string )=>dispatch(fetchTodoAsyncAction(userId))
     }
 }
