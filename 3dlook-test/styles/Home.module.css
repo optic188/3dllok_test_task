@@ -1,0 +1,40 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+
+.title {
+  margin: 0 0 1rem;
+  line-height: 1.15;
+  font-size: 1.6rem;
+}
+
+.title {
+  text-align: center;
+}
+.done {
+ background:  rgba(161,255,161,1.00);
+}
+.done input {
+  background:  rgba(161,255,161,1.00);
+  border: 0;
+}
+.inputRow {
+  display: flex;
+  align-items: center;
+}
+.inputRow input {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
