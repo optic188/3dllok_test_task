@@ -26,6 +26,7 @@ export const taskSlice = createSlice({
     initialState,
     reducers: {
         markItemAsDone(state, action) {
+            console.log(action)
             state.todoList = state.todoList.map((elem)=> {
                 if(elem.id ===action.payload) {
                     elem.completed = true
@@ -45,7 +46,6 @@ export const taskSlice = createSlice({
                  state.loading = true;
             })
             .addCase(fetchTodoAsyncAction.fulfilled, (state, action) => {
-                console.log('action', action)
                 return {
                     loading: false,
                     todoList: action.payload
@@ -53,6 +53,7 @@ export const taskSlice = createSlice({
             })
             .addCase(fetchTodoAsyncAction.rejected, (state) => {
                  state.loading = false;
+                 state.todoList = []
             })
     },
     // extraReducers: {

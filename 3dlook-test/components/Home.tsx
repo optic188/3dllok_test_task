@@ -29,9 +29,9 @@ const Home: NextPage = () => {
                     <h1 className={styles.title}>
                         3d look test task
                     </h1>
-                        {todoList.map((elem)=>{
+                        {todoList.length>0 ? (todoList.map((elem)=>{
                             return (
-                                <div className={`${elem.completed ? styles.done: null}`}>
+                                <div  key={elem.title} className={`${elem.completed ? styles.done: null}`}>
                                     <div className={styles.inputRow}>
                                         <IonInput value={elem.title} style={{width:'100%'}} ></IonInput>
                                         <IonButton onClick={()=>finishTask(elem.id)}>Done</IonButton>
@@ -39,17 +39,12 @@ const Home: NextPage = () => {
                                     </div>
                                 </div>
                                 )
-                        })}
+                        })):(<p>No items found, probably cause api error</p>)}
                 </main>
 
             <style jsx>{`
                 main {
                   padding: 5rem 6rem;
-                  //flex: 1;
-                  //display: flex;
-                  //flex-direction: column;
-                  //justify-content: center;
-                  //align-items: center;
                 }
               `}</style>
 
