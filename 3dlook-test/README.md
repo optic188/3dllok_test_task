@@ -1,7 +1,7 @@
 the test task for 3d look 
 To run the app
-1. Clone the repo 
-2. Move into sub folder, with package json
+1. Clone the repo , it will be only one folder, 3dlook-test
+2. Move into sub folder, 3dlook-test,  with package json
 3. npm i -> npm run dev, after success check the localhost:3000 in u browser
 
 What was done:
